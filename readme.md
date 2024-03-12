@@ -55,6 +55,29 @@ function Component() {
     ...
   );
 }
-
+```
 ## API
+
+### getScriptOption
+ - Type: ```afterInteractive | requestIdleTime```
+ - Default: ```afterInteractive```
+ - optional
+
+### id
+ - Type: ```String```
+ - optional
+
+### onError
+ - Type: ```callback function```
+ - optional
+
+### onReady
+ - Type: ```callback function```
+
+ - optional
+
+### onLoad
+ - Type: ```callback function```
+ - optional
+
 
