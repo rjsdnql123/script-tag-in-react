@@ -1,9 +1,9 @@
 import { ScriptHTMLAttributes, useEffect, useRef } from "react";
-
+import { requestIdleCallback } from "./shared/requestIdlecallback";
 export interface ScriptProps extends ScriptHTMLAttributes<HTMLScriptElement> {
   id?: string;
-  onLoad: (e: any) => void;
-  getScriptOption: "afterInteractive" | "requestIdleTime";
+  onLoad?: (e: any) => void;
+  getScriptOption?: "afterInteractive" | "requestIdleTime";
   onReady?: () => void;
   onError?: (e: any) => void;
 }
@@ -40,7 +40,7 @@ function Script(props: ScriptProps) {
   }, [props, getScriptOption]);
 
   const loadIdleTimeScript = (props: ScriptProps) => {
-    window.requestIdleCallback(() => {
+    requestIdleCallback(() => {
       loadScript(props);
     });
   };
@@ -52,6 +52,7 @@ function loadScript(props: ScriptProps) {
   const { src, id, onLoad = () => {}, onReady, onError } = props;
 
   const cacheKey = id || src;
+
   if (cacheKey && LocalScriptCache.has(cacheKey)) return;
 
   const script = document.createElement("script");
