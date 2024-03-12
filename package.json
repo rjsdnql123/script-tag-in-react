@@ -1,9 +1,22 @@
 {
   "name": "script-tag-in-react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "repository": {
+    "url": "https://github.com/rjsdnql123/script-tag-in-react"
+  },
+  "homepage": "https://github.com/rjsdnql123/script-tag-in-react",
+  "keywords": [
+    "react",
+    "script",
+    "script in jsx"
+  ],
+  "bugs": {
+    "url": "https://github.com/rjsdnql123/script-tag-in-react",
+    "email": "rjsdnql123@gmail.com"
+  },
   "devDependencies": {
     "@babel/core": "^7.24.0",
     "@rollup/plugin-babel": "^6.0.4",
