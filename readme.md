@@ -31,7 +31,8 @@ import Script from "script-tag-in-react";
 function Component() {
   const onReady = () => {
     // A function that operates when downloaded and ready for use.
-    // If there is a duplicate call, the script will not be invoked, but the function will still operate.
+    // If there is a duplicate call, the script will not be invoked,
+    //but the function will still operate.
   };
 
   const onError = () => {
