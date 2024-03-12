@@ -10,8 +10,9 @@
       "moduleResolution": "node",
       "resolveJsonModule": true,
       "jsx": "react",
+      "allowJs": true,
       "declaration": true,
-      "declarationDir": "types",
+      "declarationDir": "./dist",
       "outDir": "dist",
       "allowSyntheticDefaultImports": true,
       "baseUrl": "."
