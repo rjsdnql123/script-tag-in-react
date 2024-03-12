@@ -36,9 +36,7 @@ function Component() {
         onError={onError}
         onLoad={onLoad}
         src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"
-        async
-        defer
-        strategy="requestIdleTime"
+        getScriptOption="requestIdleTime"
       />
     ...
   );
