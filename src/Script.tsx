@@ -57,7 +57,10 @@ function loadScript(props: ScriptProps) {
 
   const script = document.createElement("script");
 
-  script.src = src;
+
+  if(src) {
+    script.src = src;
+  }
 
   for (const [k, value] of Object.entries(props)) {
     if (value === undefined || ignoreProps.includes(k)) {
