@@ -56,6 +56,34 @@ function Component() {
   );
 }
 ```
+
+### use Jquery
+
+```js
+import Script from "script-tag-in-react";
+
+function ScriptLoadComponent() {
+  const jqueryReady = () => {
+    window.$((e) => {
+      alert(e, "Hello jQuery!!");
+    });
+
+  };
+
+  return (
+    <div>
+      <Script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        onReady={jqueryReady}
+      />
+    </div>
+  );
+}
+
+export default ScriptLoadComponent;
+
+```
+
 ## API
 
 ### getScriptOption
