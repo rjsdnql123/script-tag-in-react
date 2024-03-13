@@ -36,6 +36,7 @@ function Script(props: ScriptProps) {
       } else if (getScriptOption === "requestIdleTime") {
         loadIdleTimeScript(props);
       }
+      initScriptOnLoad.current = true;
     }
   }, [props, getScriptOption]);
 
