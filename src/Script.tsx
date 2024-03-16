@@ -6,6 +6,7 @@ export interface ScriptProps extends ScriptHTMLAttributes<HTMLScriptElement> {
   getScriptOption?: "afterInteractive" | "requestIdleTime";
   onReady?: () => void;
   onError?: (e: any) => void;
+  src: string;
 }
 
 const LocalScriptCache = new Set();
@@ -13,7 +14,7 @@ const LocalScriptCache = new Set();
 const ignoreProps = ["onLoad", "onReady", "onError", "getScriptOption"];
 
 function Script(props: ScriptProps) {
-  const { id, src = "", getScriptOption = "afterInteractive", onReady } = props;
+  const { id, src, getScriptOption = "afterInteractive", onReady } = props;
 
   const initScriptOnReadyRef = useRef(false);
 
