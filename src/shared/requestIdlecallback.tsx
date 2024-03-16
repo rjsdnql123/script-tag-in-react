@@ -1,6 +1,6 @@
 export const requestIdleCallback =
     window.requestIdleCallback ||
-    function(cb:IdleRequestCallback):number {
+    function(cb:IdleRequestCallback) {
         var start = Date.now();
         return setTimeout(function() {
             cb({
