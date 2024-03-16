@@ -86,6 +86,10 @@ export default ScriptLoadComponent;
 
 ## API
 
+### src
+ - Type: ```string```
+ - Required
+
 ### getScriptOption
  - Type: ```afterInteractive | requestIdleTime```
  - Default: ```afterInteractive```
@@ -108,4 +112,4 @@ export default ScriptLoadComponent;
  - Type: ```callback function```
  - optional
 
-
+### All other values are found in ScriptHTMLAttributes.
