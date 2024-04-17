@@ -50,7 +50,8 @@
     "typescript": "^5.2.2"
   },
   "peerDependencises": {
-    "react": ">=16.9.0"
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
   },
   "scripts": {
     "start": "rollup -c --bundleConfigAsCjs -w",
